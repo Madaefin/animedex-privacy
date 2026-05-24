@@ -15,60 +15,54 @@
       padding: 2rem 1rem 4rem;
     }
 
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-    }
+    .container { max-width: 780px; margin: 0 auto; }
 
     header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       border-bottom: 1px solid #2a2a38;
       padding-bottom: 1.5rem;
       margin-bottom: 2.5rem;
     }
 
-    .logo {
-      font-size: 1.5rem;
+    header img { width: 52px; height: 52px; border-radius: 12px; }
+
+    .header-text .logo {
+      font-size: 1.4rem;
       font-weight: 700;
       color: #a78bfa;
       letter-spacing: -0.5px;
-      margin-bottom: 0.25rem;
     }
 
-    header p {
-      font-size: 0.85rem;
-      color: #6b6b82;
-    }
+    .header-text p { font-size: 0.82rem; color: #6b6b82; }
 
-    h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 0.4rem;
-    }
+    h1 { font-size: 2rem; font-weight: 700; color: #ffffff; margin-bottom: 0.4rem; }
 
     h2 {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 600;
       color: #c4b5fd;
-      margin-top: 2.25rem;
-      margin-bottom: 0.6rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.65rem;
       padding-left: 0.75rem;
       border-left: 3px solid #7c3aed;
     }
 
+    h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-top: 1.25rem;
+      margin-bottom: 0.4rem;
+    }
+
     p { margin-bottom: 0.9rem; }
 
-    ul {
-      margin: 0.4rem 0 0.9rem 1.4rem;
-    }
+    ul { margin: 0.4rem 0 0.9rem 1.4rem; }
+    ul li { margin-bottom: 0.35rem; }
 
-    ul li { margin-bottom: 0.3rem; }
-
-    a {
-      color: #a78bfa;
-      text-decoration: none;
-    }
-
+    a { color: #a78bfa; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     .highlight {
@@ -82,11 +76,21 @@
 
     .highlight strong { color: #ffffff; }
 
+    .notice {
+      background: #1e1426;
+      border: 1px solid #4c1d95;
+      border-radius: 8px;
+      padding: 0.85rem 1.1rem;
+      margin: 1rem 0;
+      font-size: 0.88rem;
+      color: #c4b5fd;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 0.75rem 0 1rem;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
 
     th {
@@ -106,273 +110,540 @@
 
     tr:last-child td { border-bottom: none; }
 
+    .toc {
+      background: #141420;
+      border: 1px solid #2a2a38;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.88rem;
+    }
+
+    .toc p { font-weight: 600; color: #ffffff; margin-bottom: 0.5rem; }
+    .toc ol { margin-left: 1.2rem; }
+    .toc li { margin-bottom: 0.25rem; }
+
     footer {
       margin-top: 3rem;
       padding-top: 1.5rem;
       border-top: 1px solid #2a2a38;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: #6b6b82;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+<div class="container">
 
-    <header>
+  <header>
+    <img src="logo.png" alt="Animedex logo" />
+    <div class="header-text">
       <div class="logo">Animedex</div>
       <p>Anime tracking &amp; discovery</p>
-    </header>
-
-    <h1>Privacy Policy</h1>
-    <p>Last updated: <strong>24 May 2026</strong></p>
-
-    <p>
-      This Privacy Policy explains how Animedex ("we", "our", or "us") collects, uses, stores, and
-      protects your personal data when you use the Animedex mobile application ("the App"). It also
-      explains your rights under the General Data Protection Regulation (GDPR) and related
-      applicable laws.
-    </p>
-
-    <p>
-      By creating an account or using the App you agree to the practices described in this policy.
-      If you do not agree, please do not use the App.
-    </p>
-
-    <!-- ───────────────────────────────────────────── -->
-    <h2>1. Who We Are</h2>
-
-    <p>
-      The App is developed and operated by an individual developer based in Romania, European Union.
-      For all data-related inquiries, please contact us at:
-      <a href="mailto:madalin.simion2000@gmail.com">madalin.simion2000@gmail.com</a>
-    </p>
-
-    <p>
-      As our establishment is within the EU, we are subject to the General Data Protection
-      Regulation (EU) 2016/679 (GDPR) directly.
-    </p>
-
-    <!-- ───────────────────────────────────────────── -->
-    <h2>2. Data We Collect</h2>
-
-    <p>We collect only the data necessary to provide and improve the App's functionality.</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Data type</th>
-          <th>Specific data</th>
-          <th>Required?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Account credentials</td>
-          <td>Email address, hashed password (managed by Firebase)</td>
-          <td>Required to create an account</td>
-        </tr>
-        <tr>
-          <td>Profile information</td>
-          <td>Username, profile picture (avatar you upload)</td>
-          <td>Optional — you can use the App without setting these</td>
-        </tr>
-        <tr>
-          <td>App activity</td>
-          <td>Anime library entries (watchlist), watch status &amp; progress, preferred genre tags, favourite anime titles</td>
-          <td>Core app functionality — optional per entry</td>
-        </tr>
-        <tr>
-          <td>Device &amp; technical identifiers</td>
-          <td>Firebase installation ID, device type/OS version (used for crash reporting and service reliability)</td>
-          <td>Collected automatically</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>
-      We do <strong>not</strong> collect location data, contacts, messages, financial information,
-      health data, or any data not listed above.
-    </p>
-
-    <!-- ───────────────────────────────────────────── -->
-    <h2>3. How We Use Your Data</h2>
-
-    <ul>
-      <li><strong>Account management</strong> — to create, authenticate, and secure your account.</li>
-      <li><strong>App functionality</strong> — to store and display your anime library, preferences, and profile.</li>
-      <li><strong>Personalisation</strong> — to show anime recommendations based on your saved tags and favourites.</li>
-      <li><strong>Service reliability</strong> — to diagnose crashes and monitor app performance.</li>
-    </ul>
-
-    <p>We do <strong>not</strong> sell your data, use it for advertising, or share it for marketing purposes.</p>
-
-    <!-- ───────────────────────────────────────────── -->
-    <h2>4. Legal Basis for Processing (GDPR)</h2>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Processing activity</th>
-          <th>Legal basis</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Account creation and authentication (email, password)</td>
-          <td>Performance of a contract (Art. 6(1)(b) GDPR)</td>
-        </tr>
-        <tr>
-          <td>Storing your anime library and preferences</td>
-          <td>Performance of a contract (Art. 6(1)(b) GDPR)</td>
-        </tr>
-        <tr>
-          <td>Profile picture and username</td>
-          <td>Your consent (Art. 6(1)(a) GDPR) — you provide these voluntarily</td>
-        </tr>
-        <tr>
-          <td>Device identifiers for crash reporting</td>
-          <td>Legitimate interests (Art. 6(1)(f) GDPR) — maintaining a stable and secure service</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- ───────────────────────────────────────────── -->
-    <h2>5. Third-Party Services</h2>
-
-    <p>
-      The App uses <strong>Firebase</strong> (provided by Google LLC) for authentication and backend
-      infrastructure. When you sign in, Firebase receives and processes your email address, IP
-      address, and user-agent string as part of the authentication flow.
-    </p>
-
-    <p>
-      If you sign in with Google, Google's OAuth service is also involved. Google's privacy practices
-      are governed by the
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
-    </p>
-
-    <p>
-      No other third-party analytics, advertising, or tracking SDKs are integrated into the App.
-    </p>
-
-    <!-- ───────────────────────────────────────────── -->
-    <h2>6. Data Retention</h2>
-
-    <p>
-      We retain your personal data for as long as your account exists. When you delete your account
-      (via the in-app <em>Delete Account</em> option in Settings), all your personal data —
-      including your email, username, profile picture, anime library, and preferences — is
-      permanently deleted from our servers within <strong>30 days</strong>.
-    </p>
-
-    <p>
-      Firebase may retain authentication logs for a short additional period in accordance with
-      Google's own data retention policies.
-    </p>
-
-    <!-- ───────────────────────────────────────────── -->
-    <h2>7. Data Security</h2>
-
-    <ul>
-      <li>All data transmitted between the App and our servers is encrypted using <strong>HTTPS / TLS</strong>.</li>
-      <li>Passwords are never stored in plain text — Firebase manages password hashing.</li>
-      <li>Access tokens are stored locally on your device and are not shared with third parties beyond Firebase.</li>
-      <li>Profile pictures are stored in a secured server environment with access controls.</li>
-    </ul>
-
-    <p>
-      In the event of a personal data breach that poses a risk to your rights and freedoms, we will
-      notify the relevant supervisory authority within 72 hours as required by GDPR Art. 33, and
-      will notify affected users without undue delay where the breach is likely to result in high risk
-      (GDPR Art. 34).
-    </p>
-
-    <!-- ───────────────────────────────────────────── -->
-    <h2>8. Your Rights Under GDPR</h2>
-
-    <p>As a data subject under GDPR you have the following rights:</p>
-
-    <ul>
-      <li><strong>Right of access</strong> — you can request a copy of the personal data we hold about you.</li>
-      <li><strong>Right to rectification</strong> — you can correct inaccurate data directly in the App (username, profile picture, preferences) or contact us.</li>
-      <li><strong>Right to erasure ("right to be forgotten")</strong> — you can delete your account and all associated data at any time via Settings → Delete Account.</li>
-      <li><strong>Right to data portability</strong> — you can request an export of your data in a structured, machine-readable format.</li>
-      <li><strong>Right to restriction</strong> — you can request we restrict processing of your data in certain circumstances.</li>
-      <li><strong>Right to object</strong> — you can object to processing based on legitimate interests.</li>
-      <li><strong>Right to withdraw consent</strong> — where processing is based on consent (e.g. profile picture), you can withdraw it at any time without affecting the lawfulness of prior processing.</li>
-    </ul>
-
-    <div class="highlight">
-      To exercise any of the above rights, contact us at
-      <strong><a href="mailto:madalin.simion2000@gmail.com">madalin.simion2000@gmail.com</a></strong>.
-      We will respond within <strong>30 days</strong>.
     </div>
+  </header>
 
-    <p>
-      You also have the right to lodge a complaint with your national data protection authority.
-      In Romania, this is the
-      <a href="https://www.dataprotection.ro" target="_blank" rel="noopener">
-        Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)
-      </a>.
-    </p>
+  <h1>Privacy Policy</h1>
+  <p>Last updated: <strong>24 May 2026</strong></p>
 
-    <!-- ───────────────────────────────────────────── -->
-    <h2>9. Children's Privacy</h2>
+  <p>
+    This Privacy Policy describes how Madalin Simion, operating the Animedex mobile application
+    ("we", "our", or "us"), collects, uses, stores, and protects your personal data. It also
+    explains your rights under the General Data Protection Regulation (GDPR), UK GDPR, and other
+    applicable laws.
+  </p>
 
-    <p>
-      The App is not intended for users under the age of <strong>13</strong>. We do not knowingly
-      collect personal data from children under 13. If you believe a child under 13 has provided us
-      with personal data, please contact us immediately at
-      <a href="mailto:madalin.simion2000@gmail.com">madalin.simion2000@gmail.com</a> and we will
-      delete the data promptly.
-    </p>
+  <p>
+    This policy applies to the Animedex Android application (package name: <code>com.anime.myapp</code>).
+    Using the App does not itself constitute consent to data processing — where we rely on consent
+    we obtain it separately and explicitly.
+  </p>
 
-    <p>
-      Users between 13 and 16 years of age in Romania (and other EU member states that apply the
-      GDPR default age) must have parental or guardian consent to use the App.
-    </p>
-
-    <!-- ───────────────────────────────────────────── -->
-    <h2>10. International Data Transfers</h2>
-
-    <p>
-      Firebase (Google LLC) is a US-based service. When your data is processed by Firebase, it may
-      be transferred to and stored in the United States or other countries outside the EU. Google
-      relies on Standard Contractual Clauses (SCCs) approved by the European Commission to ensure
-      an adequate level of protection for such transfers. For more information, see
-      <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">
-        Firebase's privacy and security documentation
-      </a>.
-    </p>
-
-    <!-- ───────────────────────────────────────────── -->
-    <h2>11. Changes to This Policy</h2>
-
-    <p>
-      We may update this Privacy Policy from time to time. When we do, we will update the
-      "Last updated" date at the top of this page. For material changes, we will notify you via an
-      in-app notice or email. Continued use of the App after changes take effect constitutes
-      acceptance of the updated policy.
-    </p>
-
-    <!-- ───────────────────────────────────────────── -->
-    <h2>12. Contact Us</h2>
-
-    <p>
-      For any questions, data requests, or concerns about this Privacy Policy, contact us at:
-    </p>
-
-    <div class="highlight">
-      <strong>Email:</strong>
-      <a href="mailto:madalin.simion2000@gmail.com">madalin.simion2000@gmail.com</a><br />
-      <strong>Response time:</strong> Within 30 days
-    </div>
-
-    <footer>
-      <p>© 2026 Animedex. All rights reserved.</p>
-      <p>This policy applies to the Animedex Android application (package: com.anime.myapp).</p>
-    </footer>
-
+  <div class="toc">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#s1">Who We Are</a></li>
+      <li><a href="#s2">Data We Collect</a></li>
+      <li><a href="#s3">How We Use Your Data</a></li>
+      <li><a href="#s4">Legal Basis for Processing (GDPR)</a></li>
+      <li><a href="#s5">Automated Decision-Making &amp; Personalisation</a></li>
+      <li><a href="#s6">Third-Party Services &amp; Firebase</a></li>
+      <li><a href="#s7">Local Device Storage (ePrivacy)</a></li>
+      <li><a href="#s8">Data Retention</a></li>
+      <li><a href="#s9">Data Security</a></li>
+      <li><a href="#s10">International Data Transfers</a></li>
+      <li><a href="#s11">Your Rights</a></li>
+      <li><a href="#s12">Children's Privacy</a></li>
+      <li><a href="#s13">California Users (CCPA/CPRA)</a></li>
+      <li><a href="#s14">Changes to This Policy</a></li>
+      <li><a href="#s15">Contact Us</a></li>
+    </ol>
   </div>
+
+  <!-- 1 -->
+  <h2 id="s1">1. Who We Are</h2>
+
+  <p>
+    The data controller for Animedex is:
+  </p>
+
+  <div class="highlight">
+    <strong>Name:</strong> Madalin Simion<br />
+    <strong>Country:</strong> Romania, European Union<br />
+    <strong>Email:</strong> <a href="mailto:madalin.simion2000@gmail.com">madalin.simion2000@gmail.com</a>
+  </div>
+
+  <p>
+    As our establishment is within the EU, we are directly subject to Regulation (EU) 2016/679
+    (GDPR) and Romanian Law 190/2018. We have not appointed a Data Protection Officer (DPO)
+    as our processing does not meet the thresholds set out in Article 37 GDPR (we are not a public
+    authority, do not conduct large-scale systematic monitoring, and do not process special-category
+    data at scale).
+  </p>
+
+  <p>
+    A Data Processing Agreement (DPA) incorporating the mandatory clauses under Article 28(3) GDPR
+    is in place with Google LLC (Firebase) via Google's standard Firebase Data Processing and
+    Security Terms.
+  </p>
+
+  <!-- 2 -->
+  <h2 id="s2">2. Data We Collect</h2>
+
+  <p>We collect only the data necessary to provide the App's functionality (data minimisation — GDPR Art. 5(1)(c)).</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Specific data</th>
+        <th>Required?</th>
+        <th>Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Account credentials</td>
+        <td>Email address; password hash (Firebase manages hashing — we never see plain-text passwords); IP address at login (logged by Firebase)</td>
+        <td>Required to create an account</td>
+        <td>Provided by you</td>
+      </tr>
+      <tr>
+        <td>Profile information</td>
+        <td>Username; profile picture (avatar you upload)</td>
+        <td>Optional — the App works without these</td>
+        <td>Provided by you voluntarily</td>
+      </tr>
+      <tr>
+        <td>App activity</td>
+        <td>Anime library entries (titles, watch status, episode progress); preferred genre tags; favourite anime selections</td>
+        <td>Core functionality; each entry is optional</td>
+        <td>Provided by you through App use</td>
+      </tr>
+      <tr>
+        <td>Device &amp; technical identifiers</td>
+        <td>Firebase installation ID; device OS version (used solely for service reliability)</td>
+        <td>Collected automatically</td>
+        <td>Generated by your device / Firebase SDK</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    We use <strong>Firebase Authentication only</strong> — no Firebase Analytics, Firebase
+    Crashlytics, or other Firebase telemetry SDKs are integrated. We do <strong>not</strong>
+    collect location data, contacts, messages, financial data, health data, Google Advertising ID
+    (GAID), or any data not listed above.
+  </p>
+
+  <!-- 3 -->
+  <h2 id="s3">3. How We Use Your Data</h2>
+
+  <ul>
+    <li><strong>Account management</strong> — creating, authenticating, and securing your account.</li>
+    <li><strong>App functionality</strong> — storing and displaying your anime library, preferences, and profile.</li>
+    <li><strong>Personalised recommendations</strong> — suggesting anime based on your saved genre tags and favourites (see Section 5).</li>
+    <li><strong>Service reliability</strong> — using the Firebase installation ID and OS version to monitor and maintain app stability.</li>
+  </ul>
+
+  <p>We do <strong>not</strong> sell your data, use it for advertising, or share it for any purpose other than those listed above.</p>
+
+  <!-- 4 -->
+  <h2 id="s4">4. Legal Basis for Processing (GDPR Art. 6)</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Processing activity</th>
+        <th>Legal basis</th>
+        <th>GDPR article</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Account creation and authentication (email, IP at login)</td>
+        <td>Performance of a contract</td>
+        <td>Art. 6(1)(b)</td>
+      </tr>
+      <tr>
+        <td>Storing your anime library, watch status, genre preferences</td>
+        <td>Performance of a contract</td>
+        <td>Art. 6(1)(b)</td>
+      </tr>
+      <tr>
+        <td>Username and profile picture</td>
+        <td>Your consent (freely given — these fields are optional and the App functions fully without them)</td>
+        <td>Art. 6(1)(a)</td>
+      </tr>
+      <tr>
+        <td>Device identifiers for service reliability</td>
+        <td>Legitimate interests (maintaining a stable, secure service) — we have balanced this against your interests and concluded processing is proportionate given the limited data involved and no impact on your fundamental rights</td>
+        <td>Art. 6(1)(f)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Withdrawing consent</h3>
+  <p>
+    Where we rely on consent (username and profile picture), you can withdraw it at any time by
+    deleting the relevant data within the App's profile settings, or by contacting us. Withdrawing
+    consent does not affect the lawfulness of any processing carried out before withdrawal. Upon
+    withdrawal, the relevant data is deleted from our servers within 30 days.
+  </p>
+
+  <h3>Right to object to legitimate-interests processing</h3>
+  <p>
+    Where we process your data on the basis of legitimate interests (device identifiers for service
+    reliability — Art. 6(1)(f)), you have the right to object at any time under <strong>Art. 21(1)
+    GDPR</strong>. To exercise this right, contact us at
+    <a href="mailto:madalin.simion2000@gmail.com">madalin.simion2000@gmail.com</a>. We will cease
+    that specific processing unless we can demonstrate compelling legitimate grounds that override
+    your interests, rights, and freedoms.
+  </p>
+
+  <!-- 5 -->
+  <h2 id="s5">5. Automated Decision-Making &amp; Personalisation</h2>
+
+  <p>
+    The App generates anime recommendations for you based on the genre tags and favourite titles
+    you have explicitly saved. This constitutes <strong>profiling</strong> within the meaning of
+    GDPR Art. 4(4), as it involves automated processing of personal data to evaluate your
+    preferences.
+  </p>
+
+  <p>
+    <strong>No solely automated decisions with legal or similarly significant effects</strong> are
+    made about you — Art. 22 GDPR does not apply. The recommendation feature is purely for your
+    convenience: it only affects which anime titles are surfaced in your feed. You are always free
+    to browse and interact with all content regardless of the recommendations shown.
+  </p>
+
+  <p>
+    The logic used: we match your saved genre tags and favourite anime against our content catalogue
+    to surface titles in the same genres or from the same studios. No inferences about your
+    personality, behaviour outside the App, or sensitive characteristics are made.
+  </p>
+
+  <!-- 6 -->
+  <h2 id="s6">6. Third-Party Services &amp; Firebase</h2>
+
+  <p>
+    The App uses <strong>Firebase Authentication</strong> (provided by Google LLC, 1600 Amphitheatre
+    Parkway, Mountain View, CA 94043, USA) to create and manage user accounts. When you sign in,
+    Firebase receives and processes your email address, IP address at login, and user-agent string.
+  </p>
+
+  <p>
+    If you sign in with Google, Google's OAuth 2.0 service is also involved. Your Google ID token
+    is exchanged for a Firebase session — we receive only the Firebase ID token and do not store
+    your Google account data beyond what Firebase manages.
+  </p>
+
+  <p>
+    No other third-party analytics, advertising, crash-reporting, or tracking SDKs are integrated.
+  </p>
+
+  <p>
+    Google's data practices are governed by the
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+    and the
+    <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security documentation</a>.
+  </p>
+
+  <!-- 7 -->
+  <h2 id="s7">7. Local Device Storage (ePrivacy)</h2>
+
+  <p>
+    The App stores the following data locally on your device using Android's standard storage
+    mechanisms. No browser cookies are used.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Data stored locally</th><th>Purpose</th><th>Legal basis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Authentication access token</td>
+        <td>Keeps you logged in between app sessions without re-entering your password</td>
+        <td>Strictly necessary for the service you requested — ePrivacy exemption applies</td>
+      </tr>
+      <tr>
+        <td>Firebase installation ID</td>
+        <td>Unique identifier assigned by Firebase to this app installation for service reliability</td>
+        <td>Strictly necessary for the service you requested — ePrivacy exemption applies</td>
+      </tr>
+      <tr>
+        <td>Cached user preferences (language, theme)</td>
+        <td>Restores your display settings instantly on launch</td>
+        <td>Strictly necessary for the service you requested — ePrivacy exemption applies</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    All locally stored data is strictly necessary for the App to function as requested by you. No
+    advertising IDs, cross-app tracking tokens, or third-party tracking data are stored on your
+    device.
+  </p>
+
+  <!-- 8 -->
+  <h2 id="s8">8. Data Retention</h2>
+
+  <table>
+    <thead>
+      <tr><th>Data</th><th>Retention period</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Account data (email, username, profile picture, library, preferences)</td>
+        <td>Retained for as long as your account is active. Permanently deleted within <strong>30 days</strong> of account deletion.</td>
+      </tr>
+      <tr>
+        <td>Firebase installation ID &amp; device OS version</td>
+        <td>Retained for the duration of your account, then deleted alongside account data.</td>
+      </tr>
+      <tr>
+        <td>IP address at login (Firebase Authentication logs)</td>
+        <td>Managed by Firebase/Google per their own retention policies (typically 180 days for authentication logs). We have no control over Firebase's internal log retention.</td>
+      </tr>
+      <tr>
+        <td>Local device storage (access token, preferences)</td>
+        <td>Cleared automatically upon logout or account deletion.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    You can delete your account at any time via <strong>Settings → Delete Account</strong> within
+    the App. This triggers immediate deletion of all your data from our systems, with permanent
+    removal completed within 30 days.
+  </p>
+
+  <!-- 9 -->
+  <h2 id="s9">9. Data Security</h2>
+
+  <ul>
+    <li>All data in transit between the App and our servers is encrypted using <strong>HTTPS / TLS</strong>.</li>
+    <li>Passwords are never stored — Firebase manages credential hashing using industry-standard algorithms.</li>
+    <li>Access tokens are stored locally on your device and transmitted only to our own API endpoints over HTTPS.</li>
+    <li>Profile pictures are stored on our secured server with access controls limiting who can retrieve them.</li>
+    <li>We apply privacy-by-design and privacy-by-default principles (GDPR Art. 25): optional data fields (username, profile picture) are not required, and the App functions fully with minimum data.</li>
+    <li>We regularly review our security practices to maintain appropriate technical and organisational measures (GDPR Art. 32).</li>
+  </ul>
+
+  <p>
+    In the event of a personal data breach that poses a risk to your rights and freedoms, we will
+    notify the relevant supervisory authority within <strong>72 hours</strong> as required by GDPR
+    Art. 33. Where the breach is likely to result in high risk to you, we will notify you directly
+    without undue delay (GDPR Art. 34).
+  </p>
+
+  <!-- 10 -->
+  <h2 id="s10">10. International Data Transfers</h2>
+
+  <p>
+    Firebase (Google LLC) is a US-based service. When your data is processed by Firebase, it may
+    be transferred to and processed in the United States or other countries outside the
+    European Economic Area (EEA).
+  </p>
+
+  <p>
+    These transfers are protected by <strong>Standard Contractual Clauses (SCCs)</strong> adopted
+    by the European Commission in Decision 2021/914 of 4 June 2021, which Google/Firebase
+    incorporates into its Data Processing Terms. We have conducted a Transfer Impact Assessment
+    (TIA) in accordance with EDPB Recommendations 01/2020 and are satisfied that the SCCs,
+    combined with Google's supplementary security measures, provide adequate protection for your
+    data.
+  </p>
+
+  <p>
+    For users in the <strong>United Kingdom</strong>: transfers to Firebase are covered by
+    International Data Transfer Agreements (IDTAs) or the UK Addendum to the EU SCCs, as adopted
+    by the UK Information Commissioner's Office (ICO), which Google implements as part of its
+    standard processor terms. The EU-UK adequacy decision and Google's UK-specific transfer
+    mechanisms apply to UK users' data.
+  </p>
+
+  <!-- 11 -->
+  <h2 id="s11">11. Your Rights</h2>
+
+  <h3>Rights under EU GDPR (all users)</h3>
+
+  <ul>
+    <li>
+      <strong>Right of access (Art. 15)</strong> — request a copy of the personal data we hold
+      about you, including information on how it is processed.
+    </li>
+    <li>
+      <strong>Right to rectification (Art. 16)</strong> — correct inaccurate data directly in the
+      App (username, profile picture, preferences) or contact us.
+    </li>
+    <li>
+      <strong>Right to erasure (Art. 17)</strong> — delete your account and all associated data via
+      Settings → Delete Account. Note that this right is not absolute: GDPR Art. 17(3) allows us
+      to retain data where required by law or for the establishment, exercise, or defence of legal
+      claims. Firebase may also retain authentication logs per their own policies.
+    </li>
+    <li>
+      <strong>Right to data portability (Art. 20)</strong> — request an export of your personal
+      data (library, preferences, profile) in a structured, machine-readable format (JSON).
+      Contact us to make this request.
+    </li>
+    <li>
+      <strong>Right to restriction (Art. 18)</strong> — request that we restrict processing of
+      your data in specific circumstances (e.g., while a rectification request is pending).
+    </li>
+    <li>
+      <strong>Right to object (Art. 21)</strong> — object to processing based on legitimate
+      interests (device identifiers). See Section 4 for details. Upon a valid objection we will
+      cease that processing unless we demonstrate compelling legitimate grounds.
+    </li>
+    <li>
+      <strong>Right to withdraw consent (Art. 7(3))</strong> — withdraw consent for optional
+      profile data at any time (see Section 4). Withdrawal does not affect the lawfulness of
+      prior processing.
+    </li>
+    <li>
+      <strong>Right not to be subject to solely automated decisions (Art. 22)</strong> — our
+      recommendations are not solely automated decisions with legal or similarly significant effects
+      (see Section 5).
+    </li>
+  </ul>
+
+  <div class="highlight">
+    <strong>To exercise any right:</strong> email
+    <a href="mailto:madalin.simion2000@gmail.com">madalin.simion2000@gmail.com</a>. We will
+    respond within <strong>one month</strong>. In complex or multiple cases, we may extend this by
+    a further two months with prior notice (GDPR Art. 12(3)).
+  </div>
+
+  <h3>EU supervisory authority</h3>
+  <p>
+    You have the right to lodge a complaint with the Romanian data protection authority:
+    <a href="https://www.dataprotection.ro" target="_blank" rel="noopener">
+      Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)
+    </a>.
+  </p>
+
+  <h3>Rights under UK GDPR (UK users)</h3>
+  <p>
+    If you are based in the United Kingdom, the same rights listed above apply to you under the
+    UK GDPR (as retained in UK law by the EU (Withdrawal) Act 2018). You may lodge a complaint
+    with the UK supervisory authority:
+    <a href="https://ico.org.uk" target="_blank" rel="noopener">
+      Information Commissioner's Office (ICO)
+    </a>.
+  </p>
+
+  <!-- 12 -->
+  <h2 id="s12">12. Children's Privacy</h2>
+
+  <p>
+    The App is a general-audience service and is <strong>not directed at children</strong>.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Under 13 (all jurisdictions):</strong> We do not knowingly collect personal data
+      from children under 13. If you believe a child under 13 has created an account, contact us
+      immediately at <a href="mailto:madalin.simion2000@gmail.com">madalin.simion2000@gmail.com</a>
+      and we will delete the account and all associated data promptly. Parents or guardians may
+      also contact us to request deletion of any data collected from their child.
+    </li>
+    <li>
+      <strong>Ages 13–15 in Romania (and EU member states where the GDPR age of consent for
+      digital services is 16):</strong> Under Romanian Law 190/2018 Art. 5, the minimum age for
+      providing consent to personal data processing in information society services is
+      <strong>16 years</strong>. Users aged 13–15 in Romania (and other EU states applying the
+      GDPR Art. 8 default of 16) require verifiable parental or guardian consent before using
+      the App.
+    </li>
+    <li>
+      <strong>Note for other EU states:</strong> Some EU member states have set the digital consent
+      age lower than 16 (e.g., Spain: 14; Denmark, Finland, Sweden: 13). The applicable age
+      depends on the user's country of residence.
+    </li>
+  </ul>
+
+  <p>
+    This policy is consistent with the U.S. Children's Online Privacy Protection Act (COPPA).
+    We do not knowingly collect personal data from US children under 13, and the App is not
+    directed at them. If we become aware that we have received data from a US child under 13
+    without verifiable parental consent, we will delete it immediately.
+  </p>
+
+  <!-- 13 -->
+  <h2 id="s13">13. California Users (CCPA / CPRA)</h2>
+
+  <p>
+    The California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act
+    (CPRA), may apply if you are a California resident. As an individual developer, we do not
+    currently meet the revenue or data-volume thresholds that make CCPA mandatory. However, we
+    voluntarily extend the following disclosures:
+  </p>
+
+  <ul>
+    <li>We do <strong>not sell or share</strong> your personal information within the meaning of CCPA/CPRA.</li>
+    <li>You have the right to know what personal data we have collected about you, to request deletion, and to correct inaccurate data — exercise these via the contact details in Section 15.</li>
+    <li>We do not use your data for cross-context behavioural advertising.</li>
+  </ul>
+
+  <!-- 14 -->
+  <h2 id="s14">14. Changes to This Policy</h2>
+
+  <p>
+    We may update this Privacy Policy to reflect changes in our practices, the App, or applicable
+    law. When we do, we will update the "Last updated" date at the top. For material changes, we
+    will notify you via an in-app notice or email at least 14 days before the changes take effect.
+    Continued use of the App after the effective date of a material change constitutes
+    acknowledgement of the updated policy. Where a change affects consent-based processing, we
+    will obtain fresh consent.
+  </p>
+
+  <!-- 15 -->
+  <h2 id="s15">15. Contact Us</h2>
+
+  <p>For any questions, data requests, or concerns about this Privacy Policy:</p>
+
+  <div class="highlight">
+    <strong>Controller:</strong> Madalin Simion<br />
+    <strong>Email:</strong> <a href="mailto:madalin.simion2000@gmail.com">madalin.simion2000@gmail.com</a><br />
+    <strong>Response time:</strong> Within one month (GDPR Art. 12(3))
+  </div>
+
+  <div class="notice">
+    If you are not satisfied with our response, you have the right to lodge a complaint with your
+    national data protection authority — in Romania, the
+    <a href="https://www.dataprotection.ro" target="_blank" rel="noopener">ANSPDCP</a>;
+    in the UK, the <a href="https://ico.org.uk" target="_blank" rel="noopener">ICO</a>.
+  </div>
+
+  <footer>
+    <p>© 2026 Madalin Simion. All rights reserved.</p>
+    <p>Animedex Android application · Package: com.anime.myapp · Version: 1.0</p>
+  </footer>
+
+</div>
 </body>
 </html>
